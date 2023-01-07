@@ -1,4 +1,5 @@
 import { Container, Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -17,12 +18,13 @@ function App() {
           <Form.Control required type='username' size='lg' placeholder='Username' autoComplete='username' className='mb-1 position-relative formInput'></Form.Control>
         </Form.Group>
         <Form.Group controlId='sign-in-password' className='mb-3'>
-          <Form.Control required type='password' size='lg' placeholder='Password' autoComplete='current-password' className='mb-4 position-relative formInput'></Form.Control>
+          <Form.Control required type='password' size='lg' placeholder='Password' autoComplete='current-password' className='mb-2 position-relative formInput'></Form.Control>
         </Form.Group>
 
         <div className='d-grid'>
           <Button variant='primary' size='lg' type='submit'>Sign In</Button>
         </div>
+        <Link className='mb-2 position-relative linkText' to="/login">Do you have an account?</Link>
         <p className='mt-4 littleText'>&copy; 2022-2023 ChatApp Demo</p>
       </Form>
     </Container>

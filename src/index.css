@@ -16,6 +16,13 @@ body{
   font-weight: 500;
 }
 
+.linkText{
+  color: #424242;
+  font-weight: 600;
+  font-size: medium;
+  text-decoration: none;
+}
+
 .form-bg{
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(20px);
