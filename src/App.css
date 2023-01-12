@@ -1,6 +1,21 @@
-.app-logo{
-  width: 72px;
-  height: 72px;
+body{
+  display: grid;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff2d8486, #926cd8, #926cd8);
+  background-size: 300% 300%;
+  animation: animatedBG-gradient 9s ease-out infinite;
+}
+
+@keyframes animatedBG-gradient{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
 }
 
 #main-container{
@@ -9,4 +24,9 @@
 
 #register-form{
   max-width: 330px;
+}
+
+.app-logo{
+  width: 72px;
+  height: 72px;
 }

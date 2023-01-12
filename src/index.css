@@ -3,7 +3,6 @@
 body{
   display: grid;
   min-height: 100vh;
-  background: linear-gradient(121deg, #2d81ff86, #2cd5ffab);
 }
 
 .biggerText{
@@ -24,7 +23,7 @@ body{
 }
 
 .form-bg{
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.082);
   backdrop-filter: blur(20px);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.055);
   border-radius: 12px;
