@@ -5,6 +5,11 @@ body{
   min-height: 100vh;
 }
 
+.toastC{
+  margin: 0%;
+  display: inline;
+}
+
 .biggerText{
   color: #414141;
   font-weight: 700;
