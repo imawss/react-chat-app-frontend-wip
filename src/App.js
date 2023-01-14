@@ -40,11 +40,21 @@ function App() {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        theme: "light",        
+        theme: "light",
       });
       console.log("sucess!");
     }).catch((error) => {
       console.log("error!");
+      toast.error("Registration failed!", {
+        position: "top-right",
+        autoClose: 800,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     });
   }
 
@@ -72,7 +82,7 @@ function App() {
           <Link className='mb-2 position-relative linkText' to="/login">Do you have an account?</Link>
           <p className='mt-4 littleText'>&copy; 2022-2023 ChatApp Demo</p>
         </Form>
-        <ToastContainer toastStyle={{ backgroundColor: "#ffffff1a", color:"#424242" }} limit={3} className="toast-C" />
+        <ToastContainer toastStyle={{ backgroundColor: "#ffffff1a", color: "#424242" }} limit={3} className="toast-C" />
       </div>
     </Container>
   )
