@@ -10,7 +10,7 @@ function App() {
   const [password, setPass] = useState('');
   const [username, setUsername] = useState('');
   const [email, setMail] = useState('');
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const passwordSet = event => {
     const newPassword = event.target.value;
@@ -45,7 +45,8 @@ function App() {
         theme: "light",
       });
       console.log("sucess!");
-      setTimeout(navigate("/home"), 33000);
+      navigate("/home");
+      //NOTE:I need add delay to api
     }).catch((error) => {
       console.log("error!");
       toast.error("Registration failed!", {
