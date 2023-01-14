@@ -1,6 +1,6 @@
 import { Container, Form, Button } from 'react-bootstrap';
-import { Link, Navigate } from 'react-router-dom';
-import { useRef, useState } from 'react';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { useRef, useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Axios from "axios";
@@ -10,6 +10,8 @@ function App() {
   const [password, setPass] = useState('');
   const [username, setUsername] = useState('');
   const [email, setMail] = useState('');
+  const navigate = useNavigate();
+
   const passwordSet = event => {
     const newPassword = event.target.value;
     setPass(newPassword);
@@ -43,6 +45,7 @@ function App() {
         theme: "light",
       });
       console.log("sucess!");
+      setTimeout(navigate("/home"), 33000);
     }).catch((error) => {
       console.log("error!");
       toast.error("Registration failed!", {
