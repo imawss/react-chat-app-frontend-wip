@@ -6,7 +6,7 @@ import { useRef, useState } from 'react';
 import Axios from "axios";
 import './Login.css';
 
-function LoginPages() {
+function LoginPage() {
 
   const [password, setPass] = useState('');
   const [email, setMail] = useState('');
@@ -83,4 +83,4 @@ function LoginPages() {
   )
 }
 
-export default LoginPages;
+export default LoginPage;
