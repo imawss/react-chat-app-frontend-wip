@@ -44,9 +44,8 @@ function App() {
         progress: undefined,
         theme: "light",
       });
-      console.log("sucess!");
-      navigate("/home");
-      //NOTE:I need add delay to api
+      console.log("success!");
+      setTimeout(() => {navigate("/home")}, 1200);
     }).catch((error) => {
       console.log("error!");
       toast.error("Registration failed!", {
