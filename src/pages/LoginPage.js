@@ -1,5 +1,5 @@
 import { Container, Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { useRef, useState } from 'react';
@@ -8,6 +8,7 @@ import './Login.css';
 
 function LoginPage() {
 
+  const navigate = useNavigate();
   const [password, setPass] = useState('');
   const [email, setMail] = useState('');
   const passwordSet = event => {
@@ -37,6 +38,7 @@ function LoginPage() {
         progress: undefined,
         theme: "light",
       });
+      setTimeout(() => {navigate("/home")}, 1200);
     }).catch((error) => {
       console.log("error!");
       toast.error("Login failed!", {
