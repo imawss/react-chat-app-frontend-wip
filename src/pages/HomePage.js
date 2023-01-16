@@ -6,7 +6,16 @@ import "react-toastify/dist/ReactToastify.css";
 import Axios from "axios";
 import './Home.css';
 
+
+
 function HomePage() {
+  
+  const checkAuth = () => {
+    console.log("func test!");
+  }
+
+  checkAuth();
+
   return (
     <h1>Test</h1>
   )
