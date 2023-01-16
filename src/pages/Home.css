@@ -1,0 +1,13 @@
+#container-h{
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.messageContainer{
+    background: rgba(255, 255, 255, 0.082);
+    backdrop-filter: blur(20px);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.089);
+    border-radius: 12px;
+    padding: 30% 60%;
+}
