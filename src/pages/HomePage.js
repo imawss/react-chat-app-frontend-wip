@@ -9,14 +9,27 @@ import './Home.css';
 
 
 function HomePage() {
-  const[messages, getMessages] = useState([]);
+  const[messages, setMessages] = useState([]);
   const navigate = useNavigate();
+
+  const json2Array = (json) => {
+    var result = [];
+    var keys = Object.keys(json);
+    keys.forEach(function(key){
+        result.push(json[key]);
+    });
+    return result;
+  };
+
+
 
   const getAllMessages = async ()=> {
     await Axios.get("http://localhost:8000/apiv1/messages/getAll")
     .then((response) => {
       const allMessages = response.data;
-      getMessages(allMessages);
+      console.log(response.data);
+      setMessages(json2Array(allMessages));
+      console.log(json2Array(allMessages));
     }).catch((error) => {
       console.log(error);
     });
@@ -42,6 +55,9 @@ function HomePage() {
     <Container id='main-container' className='d-grid h-100'>
       <div className='messageContainer'>
         <h1 className='fixed-top' id='container-h'>#chatroom-public-test</h1><hr/>
+        <ul>
+         {messages.map(message => (<li key={message.messageId}>{message.message.message}</li>))}
+        </ul>
       </div>
     </Container>
   )
