@@ -27,9 +27,8 @@ function HomePage() {
     await Axios.get("http://localhost:8000/apiv1/messages/getAll")
     .then((response) => {
       const allMessages = response.data;
-      console.log(response.data);
       setMessages(json2Array(allMessages));
-      console.log(json2Array(allMessages));
+      setTimeout(() => {getAllMessages()}, 3000);
     }).catch((error) => {
       console.log(error);
     });
@@ -54,7 +53,7 @@ function HomePage() {
   return (
     <Container id='main-container' className='d-grid h-100'>
       <div className='messageContainer'>
-        <h1 className='fixed-top' id='container-h'>#chatroom-public-test</h1><hr/>
+        <h1 className='fixed-top d-grid h-100' id='container-h'>#chatroom-public-test</h1>
         <ul>
          {messages.map(message => (<li key={message.messageId}>{message.message.message}</li>))}
         </ul>

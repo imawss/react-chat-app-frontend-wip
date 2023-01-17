@@ -9,5 +9,17 @@
     backdrop-filter: blur(20px);
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.089);
     border-radius: 12px;
-    padding: 30% 60%;
+    padding: 20% 40%;
+}
+
+li{
+    color: rgb(215, 215, 215);
+    font-weight: 600;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.082);
+    backdrop-filter: blur(20px);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.089);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 5%;
 }
