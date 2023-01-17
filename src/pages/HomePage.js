@@ -9,29 +9,29 @@ import './Home.css';
 
 
 function HomePage() {
-  const[messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([]);
   const navigate = useNavigate();
 
   const json2Array = (json) => {
     var result = [];
     var keys = Object.keys(json);
-    keys.forEach(function(key){
-        result.push(json[key]);
+    keys.forEach(function (key) {
+      result.push(json[key]);
     });
     return result;
   };
 
 
 
-  const getAllMessages = async ()=> {
+  const getAllMessages = async () => {
     await Axios.get("http://localhost:8000/apiv1/messages/getAll")
-    .then((response) => {
-      const allMessages = response.data;
-      setMessages(json2Array(allMessages));
-      setTimeout(() => {getAllMessages()}, 3000);
-    }).catch((error) => {
-      console.log(error);
-    });
+      .then((response) => {
+        const allMessages = response.data;
+        setMessages(json2Array(allMessages));
+        setTimeout(() => { getAllMessages() }, 3000);
+      }).catch((error) => {
+        console.log(error);
+      });
   }
 
   useEffect(() => {
@@ -40,13 +40,13 @@ function HomePage() {
 
   const checkAuth = () => {
     Axios.get("http://localhost:8000/apiv1/users/getAuth")
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error) => {
-      //navigate("/login");
-      //ATTENTION: I NEED TO REPAIR AUTH SYSTEM!
-    });
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        //navigate("/login");
+        //ATTENTION: I NEED TO REPAIR AUTH SYSTEM!
+      });
   }
   checkAuth();
 
@@ -55,7 +55,9 @@ function HomePage() {
       <div className='messageContainer'>
         <h1 className='fixed-top d-grid h-100' id='container-h'>#chatroom-public-test</h1>
         <ul>
-         {messages.map(message => (<li key={message.messageId}>{message.message.message}</li>))}
+          {messages.map(message => (
+            <li>{message.message.message}</li>
+          ))}
         </ul>
       </div>
     </Container>
