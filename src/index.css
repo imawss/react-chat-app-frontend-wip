@@ -1,33 +1,33 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
-body{
+body {
   display: grid;
   min-height: 100vh;
 }
 
-.toastC{
+.toastC {
   margin: 0%;
   display: inline;
 }
 
-.biggerText{
+.biggerText {
   color: #414141;
   font-weight: 700;
 }
 
-.littleText{
+.littleText {
   color: #414141;
   font-weight: 500;
 }
 
-.linkText{
+.linkText {
   color: #424242;
   font-weight: 600;
   font-size: medium;
   text-decoration: none;
 }
 
-.form-bg{
+.form-bg {
   background: rgba(255, 255, 255, 0.082);
   backdrop-filter: blur(20px);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.055);

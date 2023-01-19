@@ -1,30 +1,19 @@
-#container-h{
+#chat-h {
     text-align: center;
-    margin-top: 5px;
-    font-weight: 600;
-    margin-bottom: 0%;
+    margin: 1%;
+    display: block;
 }
 
-.messageContainer{
-    background: rgba(255, 255, 255, 0.082);
+.message {
+    background: rgba(255, 255, 255, 0.062);
     backdrop-filter: blur(20px);
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.089);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.055);
     border-radius: 12px;
-    padding: 30% 20%;
+    padding: 30px;
 }
 
-.message{
-    color: rgb(215, 215, 215);
-    font-weight: 700;
-    list-style: none;
-    background: rgba(255, 255, 255, 0.082);
-    backdrop-filter: blur(20px);
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.089);
-    border-radius: 12px;
-    text-align: center;
-}
-
-.mini-t{
-    color: white;
-    padding: 1% 1%;
+.msg-txt{
+    display: block;
+    inline-size: 300px;
+    overflow-wrap: break-word;
 }

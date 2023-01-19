@@ -21,7 +21,9 @@ function HomePage() {
     return result;
   };
 
-
+  const returnUsername = () => {
+    Axios.get("ahshasd")
+  }
 
   const getAllMessages = async () => {
     await Axios.get("http://localhost:8000/apiv1/messages/getAll")
@@ -53,10 +55,13 @@ function HomePage() {
   return (
     <Container id='main-container' className='d-grid h-100'>
       <div className='messageContainer'>
-        <h1 className='fixed-top d-grid h-100' id='container-h'>#chatroom-public-test</h1>
-        <ul>
+        <h1 className='fixed-top d-grid h-100' id='chat-h'>#chatroom-public-test</h1><br/><br/><br/><br/><br/>
+        <ul className='messages'>
           {messages.map(message => (
-            <li>{message.message.message}</li>
+            <div className='message mb-4 position-relative'>
+              <h4>{message.senderMail}</h4>
+              <h5 className='msg-txt'>{message.message.message}</h5>
+            </div>
           ))}
         </ul>
       </div>
