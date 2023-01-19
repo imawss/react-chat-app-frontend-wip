@@ -58,13 +58,15 @@ function HomePage() {
         <div className='tag'>
           <h1 className='fixed-top d-grid h-100' id='chat-h'>#chatroom-public-test</h1>
         </div>
-        <br/><br/><br/><br/><br/>
+        <br /><br /><br /><br /><br />
         <ul className='messages'>
           {messages.map(message => (
-            <div className='message mb-4 position-relative'>
-              <h4>{message.senderMail}</h4>
-              <h5 className='msg-txt'>{message.message.message}</h5>
-            </div>
+            <li id='li-obj' key={message.messageCreationTime}>
+              <div className='message mb-4 position-relative'>
+                <h4>{message.senderMail}</h4>
+                <h5 className='msg-txt'>{message.message.message}</h5>
+              </div>
+            </li>
           ))}
         </ul>
       </div>

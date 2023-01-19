@@ -23,6 +23,10 @@
     padding: 30px;
 }
 
+#li-obj{
+    list-style: none;
+}
+
 .msg-txt{
     display: block;
     inline-size: 300px;
