@@ -27,6 +27,19 @@ body {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #a47dec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(132, 99, 194);
+  border-radius: 10px;
+}
+
 .form-bg {
   background: rgba(255, 255, 255, 0.082);
   backdrop-filter: blur(20px);

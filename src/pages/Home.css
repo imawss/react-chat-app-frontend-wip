@@ -4,6 +4,17 @@
     display: block;
 }
 
+.tag{
+    margin-top: 1%;
+    padding: 30px 300px;
+    background: rgba(255, 255, 255, 0.062);
+    backdrop-filter: blur(20px);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.055);
+    border-radius: 12px;
+    position: fixed;
+    z-index: 1;
+}
+
 .message {
     background: rgba(255, 255, 255, 0.062);
     backdrop-filter: blur(20px);
