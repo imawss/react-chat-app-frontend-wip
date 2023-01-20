@@ -25,8 +25,8 @@ function HomePage() {
     Axios.get("ahshasd")
   }
 
-  const getAllMessages = async () => {
-    await Axios.get("http://localhost:8000/apiv1/messages/getAll")
+  const getAllMessages = () => {
+     Axios.get("http://localhost:8000/apiv1/messages/getAll")
       .then((response) => {
         const allMessages = response.data;
         setMessages(json2Array(allMessages));
@@ -60,7 +60,8 @@ function HomePage() {
         </div>
         <br /><br /><br /><br /><br />
         <ul className='messages'>
-          {messages.map(message => (
+          {messages.sort((a,b) => a.messageCreationTime > b.messageCreationTime ? 1 : -1)
+          .map(message => (
             <li id='li-obj' key={message.messageCreationTime}>
               <div className='message mb-4 position-relative'>
                 <h4>{message.senderMail}</h4>
