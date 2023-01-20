@@ -71,7 +71,7 @@ function HomePage() {
             ))}
         </ul>
       </div>
-
+      <br /><br /><br /><br />
       <div className='messageBar fixed-bottom d-grid'>
         <input type="text" placeholder=" Text a message" id="msg-text" />
       </div>
