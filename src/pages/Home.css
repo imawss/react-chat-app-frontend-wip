@@ -32,6 +32,29 @@
     list-style: none;
 }
 
+#msg-text{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.062);
+    backdrop-filter: blur(6px);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.055);
+    border-radius: 8px;
+    border: none;
+    height: 75px;
+}
+
+#msg-text:focus{
+    outline: none;
+}
+
+.messageBar{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.062);
+    backdrop-filter: blur(6px);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.055);
+    border-radius: 8px;
+    height: 75px;
+}
+
 .msg-txt{
     display: block;
     inline-size: 300px;
