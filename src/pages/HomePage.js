@@ -26,7 +26,7 @@ function HomePage() {
   }
 
   const getAllMessages = () => {
-     Axios.get("http://localhost:8000/apiv1/messages/getAll")
+    Axios.get("http://localhost:8000/apiv1/messages/getAll")
       .then((response) => {
         const allMessages = response.data;
         setMessages(json2Array(allMessages));
@@ -60,15 +60,15 @@ function HomePage() {
         </div>
         <br /><br /><br /><br /><br />
         <ul className='messages'>
-          {messages.sort((a,b) => a.messageCreationTime > b.messageCreationTime ? 1 : -1)
-          .map(message => (
-            <li id='li-obj' key={message.messageCreationTime}>
-              <div className='message mb-4 position-relative'>
-                <h4>{message.senderMail}</h4>
-                <h5 className='msg-txt'>{message.message.message}</h5>
-              </div>
-            </li>
-          ))}
+          {messages.sort((a, b) => a.messageCreationTime > b.messageCreationTime ? 1 : -1)
+            .map(message => (
+              <li id='li-obj' key={message.messageCreationTime}>
+                <div className='message mb-4 position-relative'>
+                  <h4>{message.senderMail}</h4>
+                  <h5 className='msg-txt'>{message.message.message}</h5>
+                </div>
+              </li>
+            ))}
         </ul>
       </div>
     </Container>

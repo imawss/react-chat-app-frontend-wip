@@ -24,6 +24,8 @@
     padding: 30px;
     inline-size: 500px;
     overflow-wrap: break-word;
+    color: rgb(211, 211, 211);
+    float: left;
 }
 
 #li-obj{
